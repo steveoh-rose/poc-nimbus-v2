@@ -1,13 +1,11 @@
 import { useState } from "react";
 import {
   Collapsible,
-  Heading,
   Stack,
   Box,
   HStack,
   Text,
   Separator,
-  VStack,
 } from "@chakra-ui/react";
 import { Add, Subtract } from "@console/nimbus-assets/icons/app";
 
