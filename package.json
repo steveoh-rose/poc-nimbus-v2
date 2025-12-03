@@ -1,5 +1,6 @@
 {
   "name": "poc-nimbus-v2",
+  "homepage": "https://steveoh-rose.github.io/poc-nimbus-v2/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chakra-ui/cli": "^3.28.1",
@@ -16,6 +19,7 @@
     "@emotion/react": "^11.14.0",
     "@mantine/core": "^8.3.6",
     "@mantine/hooks": "^8.3.6",
+    "gh-pages": "^6.3.0",
     "next-themes": "^0.4.6",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
