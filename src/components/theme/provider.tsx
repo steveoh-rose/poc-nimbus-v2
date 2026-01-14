@@ -21,6 +21,7 @@ import { ColorModeProvider, type ColorModeProviderProps } from "./color-mode";
 import { buttonRecipe } from "../recipes/button.recipe";
 import { fontFamily } from "@/components/theme/font-family";
 import { alertRecipe } from "@/components/recipes/alert.recipe";
+import { breadcrumbRecipe } from "@/components/recipes/breadcrumb.recipe";
 
 const {
   red,
@@ -48,6 +49,11 @@ const cleanDefaultConfig = {
 
 const config = defineConfig({
   cssVarsPrefix: "nimbus",
+  globalCss: {
+    "*": {
+      focusRingColor: "primary.500",
+    },
+  },
   theme: {
     tokens: {
       colors: {
@@ -66,6 +72,239 @@ const config = defineConfig({
     },
     semanticTokens: {
       colors: {
+        primary: {
+          text: {
+            base: {
+              value: { _light: "{colors.sky.500}", _dark: "{colors.sky.500}" },
+            },
+            emphasized: {
+              value: {
+                _light: "{colors.sky.700}",
+                _dark: "{colors.sky.300}",
+              },
+            },
+          },
+        },
+        info: {
+          contrast: {
+            value: {
+              _light: "{colors.white}",
+              _dark: "{colors.black}",
+            },
+          },
+          fg: {
+            value: {
+              _light: "{colors.ocean.700}",
+              _dark: "{colors.ocean.200}",
+            },
+          },
+          subtle: {
+            value: {
+              _light: "{colors.ocean.100}",
+              _dark: "{colors.ocean.900}",
+            },
+          },
+          muted: {
+            value: {
+              _light: "{colors.ocean.200}",
+              _dark: "{colors.ocean.800}",
+            },
+          },
+          emphasized: {
+            value: {
+              _light: "{colors.ocean.700}",
+              _dark: "{colors.ocean.200}",
+            },
+          },
+          solid: {
+            value: {
+              _light: "{colors.ocean.600}",
+              _dark: "{colors.ocean.400}",
+            },
+          },
+          focusRing: {
+            value: {
+              _light: "{colors.ocean.500}",
+              _dark: "{colors.ocean.500}",
+            },
+          },
+        },
+        success: {
+          contrast: {
+            value: {
+              _light: "{colors.white}",
+              _dark: "{colors.black}",
+            },
+          },
+          fg: {
+            value: {
+              _light: "{colors.emerald.700}",
+              _dark: "{colors.emerald.200}",
+            },
+          },
+          subtle: {
+            value: {
+              _light: "{colors.emerald.100}",
+              _dark: "{colors.emerald.900}",
+            },
+          },
+          muted: {
+            value: {
+              _light: "{colors.emerald.200}",
+              _dark: "{colors.emerald.800}",
+            },
+          },
+          emphasized: {
+            value: {
+              _light: "{colors.emerald.700}",
+              _dark: "{colors.emerald.200}",
+            },
+          },
+          solid: {
+            value: {
+              _light: "{colors.emerald.600}",
+              _dark: "{colors.emerald.400}",
+            },
+          },
+          focusRing: {
+            value: {
+              _light: "{colors.emerald.500}",
+              _dark: "{colors.emerald.500}",
+            },
+          },
+        },
+        pending: {
+          contrast: {
+            value: {
+              _light: "{colors.white}",
+              _dark: "{colors.black}",
+            },
+          },
+          fg: {
+            value: {
+              _light: "{colors.gold.400}",
+              _dark: "{colors.gold.200}",
+            },
+          },
+          subtle: {
+            value: {
+              _light: "{colors.gold.100}",
+              _dark: "{colors.gold.900}",
+            },
+          },
+          muted: {
+            value: {
+              _light: "{colors.gold.200}",
+              _dark: "{colors.gold.800}",
+            },
+          },
+          emphasized: {
+            value: {
+              _light: "{colors.gold.700}",
+              _dark: "{colors.gold.200}",
+            },
+          },
+          solid: {
+            value: {
+              _light: "{colors.gold.600}",
+              _dark: "{colors.gold.400}",
+            },
+          },
+          focusRing: {
+            value: {
+              _light: "{colors.gold.500}",
+              _dark: "{colors.gold.500}",
+            },
+          },
+        },
+        warning: {
+          contrast: {
+            value: {
+              _light: "{colors.white}",
+              _dark: "{colors.black}",
+            },
+          },
+          fg: {
+            value: {
+              _light: "{colors.amber.400}",
+              _dark: "{colors.amber.200}",
+            },
+          },
+          subtle: {
+            value: {
+              _light: "{colors.amber.100}",
+              _dark: "{colors.amber.900}",
+            },
+          },
+          muted: {
+            value: {
+              _light: "{colors.amber.200}",
+              _dark: "{colors.amber.800}",
+            },
+          },
+          emphasized: {
+            value: {
+              _light: "{colors.amber.700}",
+              _dark: "{colors.amber.200}",
+            },
+          },
+          solid: {
+            value: {
+              _light: "{colors.amber.600}",
+              _dark: "{colors.amber.400}",
+            },
+          },
+          focusRing: {
+            value: {
+              _light: "{colors.amber.500}",
+              _dark: "{colors.amber.500}",
+            },
+          },
+        },
+        error: {
+          contrast: {
+            value: {
+              _light: "{colors.white}",
+              _dark: "{colors.black}",
+            },
+          },
+          fg: {
+            value: {
+              _light: "{colors.ruby.400}",
+              _dark: "{colors.ruby.200}",
+            },
+          },
+          subtle: {
+            value: {
+              _light: "{colors.ruby.100}",
+              _dark: "{colors.ruby.900}",
+            },
+          },
+          muted: {
+            value: {
+              _light: "{colors.ruby.200}",
+              _dark: "{colors.ruby.800}",
+            },
+          },
+          emphasized: {
+            value: {
+              _light: "{colors.ruby.700}",
+              _dark: "{colors.ruby.200}",
+            },
+          },
+          solid: {
+            value: {
+              _light: "{colors.ruby.600}",
+              _dark: "{colors.ruby.400}",
+            },
+          },
+          focusRing: {
+            value: {
+              _light: "{colors.ruby.500}",
+              _dark: "{colors.ruby.500}",
+            },
+          },
+        },
         bg: {
           DEFAULT: {
             value: { _light: "{colors.white}", _dark: "{colors.black}" },
@@ -216,14 +455,16 @@ const config = defineConfig({
     slotRecipes: {
       ...defaultChakraConfig.theme?.slotRecipes,
       alert: alertRecipe,
+      breadcrumb: breadcrumbRecipe,
     },
   },
 });
 
-console.log(config);
-console.log(cleanDefaultConfig.theme);
+console.log("default", defaultChakraConfig.theme);
 
 const system = createSystem(cleanDefaultConfig, config);
+
+console.log("system", system._config.theme);
 
 export function Provider(props: ColorModeProviderProps) {
   return (
@@ -232,3 +473,5 @@ export function Provider(props: ColorModeProviderProps) {
     </ChakraProvider>
   );
 }
+
+export default system;

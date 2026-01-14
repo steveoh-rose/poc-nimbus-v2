@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, HStack, Stack, Text, VStack } from "@chakra-ui/react";
 import {
   Community,
   MarketPlace,
@@ -9,16 +9,16 @@ import {
 const DashboardMenu = () => {
   return (
     <Stack>
-      <HStack gap="4" alignItems={"flex-start"}>
+      <HStack gap="8" alignItems={"flex-start"}>
         <Software width={80} height={80} />
-        <Box>
-          <Heading size="md" mb="1">
+        <VStack gap="0.5" align="flex-start">
+          <Heading size="lg" mb="1">
             Dashboard
           </Heading>
-          <Text fontSize="sm" color="fg.muted" lineHeight="tall">
+          <Text fontSize="sm" lineHeight="tall">
             Home to all of your services, tools and information.
           </Text>
-        </Box>
+        </VStack>
       </HStack>
     </Stack>
   );

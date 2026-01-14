@@ -11,9 +11,8 @@ import { Check } from "@console/nimbus-assets/icons/app";
 import { useLocation, useNavigate } from "react-router";
 
 const PAGES = [
-  { path: "/", label: "Dashboard" },
+  { path: "/", label: "Order" },
   { path: "/service", label: "Service" },
-  { path: "/order", label: "Order" },
 ];
 
 type KeyCombo = string;

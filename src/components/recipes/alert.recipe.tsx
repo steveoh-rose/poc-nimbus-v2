@@ -2,8 +2,6 @@ import { defineSlotRecipe, defaultConfig } from "@chakra-ui/react";
 
 const defaultAlertRecipe = defaultConfig.theme?.slotRecipes?.alert;
 
-console.log("Default Alert Recipe:", defaultAlertRecipe);
-
 export const alertRecipe = defineSlotRecipe({
   slots: ["root", "title", "description", "indicator", "content"],
   ...defaultAlertRecipe,
@@ -15,11 +13,16 @@ export const alertRecipe = defineSlotRecipe({
           bg: "colorPalette.subtle",
           borderStartWidth: "4px",
           borderStartColor: "colorPalette.solid",
+          borderTopLeftRadius: "0",
+          borderBottomLeftRadius: "0",
           paddingStart: "3",
           color: "fg.muted",
         },
         title: {
           color: "fg",
+        },
+        description: {
+          color: "colorPalette.emphasized",
         },
         indicator: {
           color: "colorPalette.solid",
@@ -28,20 +31,22 @@ export const alertRecipe = defineSlotRecipe({
     },
     status: {
       info: {
-        root: { colorPalette: "ocean" },
+        root: { colorPalette: "info" },
       },
       warning: {
-        root: { colorPalette: "amber" },
+        root: { colorPalette: "warning" },
       },
       success: {
-        root: { colorPalette: "emerald" },
+        root: { colorPalette: "success" },
       },
       error: {
-        root: { colorPalette: "ruby" },
+        root: { colorPalette: "error" },
+      },
+      neutral: {
+        root: { colorPalette: "neutral" },
       },
     },
   },
-
   defaultVariants: {
     variant: "subtle",
     status: "info",

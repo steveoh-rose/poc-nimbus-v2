@@ -1,6 +1,7 @@
 import { PriceBox } from "@/ui/PriceBox";
 import {
   Alert,
+  Badge,
   Box,
   Breadcrumb,
   Button,
@@ -17,7 +18,7 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import { Cancel } from "@console/nimbus-assets/icons/app";
+import { Add, Cancel } from "@console/nimbus-assets/icons/app";
 
 const Order = () => {
   return (
@@ -152,17 +153,17 @@ const Order = () => {
                   </Checkbox.Root>
                 </Fieldset.Content>
               </CheckboxGroup>
-              <Alert.Root status="info" mt={4}>
+              <Alert.Root variant={"subtle"} status="info">
                 <Alert.Indicator />
-                <Alert.Title>
+                <Alert.Description>
                   By clicking 'Order', I agree to be billed 300 per month by
                   invoice from HKT starting on service commencement.
-                </Alert.Title>
+                </Alert.Description>
               </Alert.Root>
             </Fieldset.Root>
           </Stack>
           <VStack w={"full"} px={[0, 0, 10]} gap={4} mt={8}>
-            <Button colorPalette={"primary"} variant={"solid"} width={"full"}>
+            <Button colorPalette="primary" variant={"solid"} width={"full"}>
               Order
             </Button>
             <Button colorPalette="secondary" variant={"ghost"} width={"full"}>
