@@ -75,7 +75,7 @@ const ServiceHeader = () => {
             </HStack>
             <Editable.Root defaultValue="Pimlico 1G" activationMode="none">
               <Editable.Preview
-                fontSize={"xl"}
+                textStyle={"xl"}
                 fontWeight={"semibold"}
                 cursor="default"
                 _hover={{ background: "transparent", textDecoration: "none" }}
